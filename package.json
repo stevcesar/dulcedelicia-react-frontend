@@ -2,7 +2,7 @@
   "name": "dulcedelicia",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/",
+  "proxy": "https://dulcedeliciabackend.azurewebsites.net/",
   "engines": {
     "node": ">=14.20.1"
   },

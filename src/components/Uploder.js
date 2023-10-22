@@ -1,4 +1,4 @@
-import axios from "../../config/axiosConfig";
+import axios from "../config/axiosConfig";
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { toast } from 'react-hot-toast';

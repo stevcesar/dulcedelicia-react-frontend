@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { store } from './Redux/Store';
 import { Provider } from 'react-redux';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

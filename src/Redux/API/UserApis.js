@@ -10,7 +10,7 @@ const logoutService = () => {
 
 // API inicio de sesion usuario
 const loginService = async (user) => {
-  const { data } = await axios.post('/api/users/login', user);
+  const { data } = await axios.post('https://dulcedeliciabackend.azurewebsites.net/api/users/login', user);
   if (data) {
     localStorage.setItem('userInfo', JSON.stringify(data));
   }
@@ -19,7 +19,7 @@ const loginService = async (user) => {
 
 // API registrar usuario
 const registerService = async (user) => {
-  const { data } = await axios.post('/api/users', user);
+  const { data } = await axios.post('https://dulcedeliciabackend.azurewebsites.net/api/users', user);
   if (data) {
     localStorage.setItem('userInfo', JSON.stringify(data));
   }
@@ -30,7 +30,7 @@ const registerService = async (user) => {
 
 // API actualizar perfil usuario
 const updateProfileService = async (user, token) => {
-  const { data } = await axios.put('/api/users', user, {
+  const { data } = await axios.put('https://dulcedeliciabackend.azurewebsites.net/api/users', user, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -45,7 +45,7 @@ const updateProfileService = async (user, token) => {
 
 // API eliminar usuario
 const deleteProfileService = async (token) => {
-  const { data } = await axios.delete('/api/users', {
+  const { data } = await axios.delete('https://dulcedeliciabackend.azurewebsites.net/api/users', {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -58,7 +58,7 @@ const deleteProfileService = async (token) => {
 
 // API cambiar contraseña
 const changePasswordService = async (passwords, token) => {
-  const { data } = await axios.put('/api/users/password', passwords, {
+  const { data } = await axios.put('https://dulcedeliciabackend.azurewebsites.net/api/users/password', passwords, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

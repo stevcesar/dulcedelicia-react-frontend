@@ -13,7 +13,7 @@ const Uploader = ({ setImage, image }) => {
   useEffect(() => {
     const getCloudinaryConfig = async () => {
       try {
-        const { data } = await axios.get('/api/config/cloudinary');
+        const { data } = await axios.get('https://dulcedeliciabackend.azurewebsites.net/api/config/cloudinary');
         console.log(data)
         setCloudinaryConfig(data);
       } catch (error) {

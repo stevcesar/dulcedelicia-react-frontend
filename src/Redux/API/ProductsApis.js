@@ -5,7 +5,7 @@ import axios from "../../config/axiosConfig";
 // obtener todas las productos
 const getcardsService = async ({ pageNumber, category, tag, search, sort }) => {
   const { data } = await axios.get(
-    `/api/products?pageNumber=${pageNumber}&category=${category}&tag=${tag}&search=${search}&sort=${sort}`
+    `https://dulcedeliciabackend.azurewebsites.net/api/products?pageNumber=${pageNumber}&category=${category}&tag=${tag}&search=${search}&sort=${sort}`
   );
 
   return data;
@@ -13,13 +13,13 @@ const getcardsService = async ({ pageNumber, category, tag, search, sort }) => {
 
 // obtener producto por id
 const getCardByIdService = async (id) => {
-  const { data } = await axios.get(`/api/products/${id}`);
+  const { data } = await axios.get(`https://dulcedeliciabackend.azurewebsites.net/api/products/${id}`);
   return data;
 };
 
 // obtener tags
 const getTagsService = async () => {
-  const { data } = await axios.get('/api/products/all/tags');
+  const { data } = await axios.get('https://dulcedeliciabackend.azurewebsites.net/api/products/all/tags');
   return data;
 };
 

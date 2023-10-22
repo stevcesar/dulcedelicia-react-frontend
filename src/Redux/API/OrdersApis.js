@@ -4,7 +4,7 @@ import axios from "../../config/axiosConfig";
 
 // obtener todas las ordenes
 const getAllOrders = async (token) => {
-  const { data } = await axios.get(`/api/orders`, {
+  const { data } = await axios.get(`https://dulcedeliciabackend.azurewebsites.net/api/orders`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -14,7 +14,7 @@ const getAllOrders = async (token) => {
 
 // obtener orden por id
 const getOrderById = async (id, token) => {
-  const { data } = await axios.get(`/api/orders/${id}`, {
+  const { data } = await axios.get(`https://dulcedeliciabackend.azurewebsites.net/api/orders/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -24,7 +24,7 @@ const getOrderById = async (id, token) => {
 
 // crear orden
 const createOrder = async (order, token) => {
-  const { data } = await axios.post(`/api/orders`, order, {
+  const { data } = await axios.post(`https://dulcedeliciabackend.azurewebsites.net/api/orders`, order, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -34,7 +34,7 @@ const createOrder = async (order, token) => {
 
 // eliminar orden
 const deleteOrder = async (id, token) => {
-  const { data } = await axios.delete(`/api/orders/${id}`, {
+  const { data } = await axios.delete(`https://dulcedeliciabackend.azurewebsites.net/api/orders/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -44,7 +44,7 @@ const deleteOrder = async (id, token) => {
 
 // eliminar todas las ordenes
 const deleteAllOrders = async (token) => {
-  const { data } = await axios.delete(`/api/orders`, {
+  const { data } = await axios.delete(`https://dulcedeliciabackend.azurewebsites.net/api/orders`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -54,7 +54,7 @@ const deleteAllOrders = async (token) => {
 
 // actualizar orden para enviar
 const completeOrder = async (datas, token) => {
-  const { data } = await axios.post(`/api/orders/${datas.orderItems._id}`, datas, {
+  const { data } = await axios.post(`https://dulcedeliciabackend.azurewebsites.net/api/orders/${datas.orderItems._id}`, datas, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

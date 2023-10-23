@@ -1,6 +1,5 @@
 import { RadioGroup } from '@headlessui/react';
 import { MdRadioButtonChecked, MdRadioButtonUnchecked } from 'react-icons/md';
-import { FilterData } from '../Data/FilterData';
 import { useState } from 'react';
 
 export default function Filter({
@@ -26,13 +25,6 @@ export default function Filter({
   }));
 
   const datas = [
-    {
-      select: states?.published,
-      setSelect: states?.setPublished,
-      title: 'Publicados',
-      data: FilterData.Published,
-      active: activePublish,
-    },
     {
       select: states?.tag,
       setSelect: states?.setTag,

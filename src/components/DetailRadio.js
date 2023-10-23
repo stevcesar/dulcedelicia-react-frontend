@@ -1,72 +1,10 @@
-import { RadioGroup } from '@headlessui/react';
 import React, { useState } from 'react';
-import { productDetailsData } from '../Data/FilterData';
 import { FreeMode, Thumbs } from 'swiper/modules';
 
 // Importar componentes de Swiper React
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const title = 'text-sm font-medium';
-
-// export function SizeRadio({ selected, setSelected }) {
-//   return (
-//     <div>
-//       {/* detalle */}
-//       <h2 className={title}>Choose your size</h2>
-//       {/* seleccionado */}
-//       <RadioGroup value={selected} onChange={setSelected}>
-//         <div className="gap-4 flex items-center flex-wrap mt-4">
-//           {productDetailsData.size.map((item) => (
-//             <RadioGroup.Option key={item.title} value={item}>
-//               {({ checked }) => (
-//                 <div
-//                   className={`
-//                      flex-colo w-12 cursor-pointer h-12 rounded-full border ${
-//                        checked ? ' bg-main text-white' : 'border-gray-300'
-//                      }
-//                      `}
-//                 >
-//                   <h5 className="text-xs font-semibold">{item.title}</h5>
-//                 </div>
-//               )}
-//             </RadioGroup.Option>
-//           ))}
-//         </div>
-//       </RadioGroup>
-//     </div>
-//   );
-// }
-
-// export function ColorRadio({ selected, setSelected }) {
-//   return (
-//     <div>
-//       {/* details */}
-//       <h2 className={title}>Choose your colors</h2>
-//       {/* select */}
-//       <RadioGroup value={selected} onChange={setSelected}>
-//         <div className="gap-4 flex-wrap flex items-center mt-4">
-//           {productDetailsData.colors.map((item) => (
-//             <RadioGroup.Option key={item.title} value={item}>
-//               {({ checked }) => (
-//                 <div
-//                   className={`flex-colo w-12 p-1 cursor-pointer h-12 rounded-full border ${
-//                     checked ? ' border-main' : 'border-gray-300'
-//                   }
-//                       `}
-//                 >
-//                   <div
-//                     style={{ backgroundColor: item.color }}
-//                     className={` w-full h-full rounded-full`}
-//                   ></div>
-//                 </div>
-//               )}
-//             </RadioGroup.Option>
-//           ))}
-//         </div>
-//       </RadioGroup>
-//     </div>
-//   );
-// }
 
 export function QuantityRadio({ quantity, setQuantity, stock }) {
   const classes =

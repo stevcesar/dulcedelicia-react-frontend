@@ -31,19 +31,19 @@ function Footer() {
       links: [
         {
           link: '#',
-          name: 'Men Outfit',
+          name: 'Pasteles',
         },
         {
           link: '#',
-          name: 'Shoes',
+          name: 'Galletas',
         },
         {
           link: '#',
-          name: 'Women Outfit',
+          name: 'Cupcakes',
         },
         {
           link: '#',
-          name: 'Swimwear',
+          name: 'Especiales',
         },
       ],
     },
